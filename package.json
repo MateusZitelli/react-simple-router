@@ -1,0 +1,23 @@
+{
+  "name": "react-router",
+  "version": "0.0.0",
+  "description": "Simple router for react.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "devDependencies": {
+  	"reactify": "0.13.x",
+  	"browserify": "4.1.x"
+  },
+  "dependencies": {
+  	"react": "0.10.x"
+  },
+  "author": "Mateus Zitelli <zitellimateus@gmail.com>",
+  "license": "GPLv2"
+}
