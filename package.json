@@ -8,15 +8,21 @@
   },
   "browserify": {
     "transform": [
-      "reactify"
+      ["reactify", {"harmony": true}]
     ]
   },
   "devDependencies": {
   	"reactify": "0.13.x",
-  	"browserify": "4.1.x"
+  	"browserify": "4.1.x",
+    "http-server": "0.6.x"
   },
   "dependencies": {
   	"react": "0.10.x"
+  },
+  "scripts": {
+    "build": "browserify -t [ reactify --es6 ] ./ -o ./build/react-router.js",
+    "build-example": "browserify -t [ reactify --es6 ] ./example/app.jsx -o ./example/builded-app.js",
+    "start-server": "http-server --cors"
   },
   "author": "Mateus Zitelli <zitellimateus@gmail.com>",
   "license": "GPLv2"

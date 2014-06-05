@@ -1,5 +1,7 @@
-"use strict"
+var Router = require('./lib/router');
+var Route = require('./lib/route');
 
-modules.exports = {
-
-}
+module.exports = {
+	Router: Router,
+	Route: Route
+};
