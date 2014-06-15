@@ -4,11 +4,12 @@ var ReactRouter = require('../index');
 
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
+
 var Teste = React.createClass({
 	render: function() {
 		return (
 			<div>
-				Teste :D
+				Hello {this.props.name} {this.props.matches[1]} :D~~~
 			</div>
 		);
 	}
@@ -16,17 +17,17 @@ var Teste = React.createClass({
 
 var index = React.createClass({
 	render: function() {
-		return (<p>Index :D</p>);
+		return (<p>Index</p>);
 	}
 });
 
 var App = React.createClass({
 	render: function() {
-		var indexRule = /^index/;
-		var testeRule = /^teste/;
+		var indexRule = /^$/;
+		var testeRule = /^test\/([0-9]*?)$/;
 		return (
 				<Router>
-					<Route rule={testeRule} component={Teste}></Route>
+					<Route rule={testeRule} component={Teste} name="Mateus"></Route>
 					<Route rule={indexRule} component={index}></Route>
 				</Router>
 			);
