@@ -2,28 +2,41 @@
   "name": "react-router",
   "version": "0.0.0",
   "description": "Simple router for react.js",
+  "author": "Mateus Zitelli <zitellimateus@gmail.com>",
+  "license": "GPLv2",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MateusZitelli/react-router.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MateusZitelli/react-router/issues"
+  },
+  "homepage": "https://github.com/MateusZitelli/react-router",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "browserify": {
-    "transform": [
-      ["reactify", {"harmony": true}]
-    ]
-  },
-  "devDependencies": {
-  	"reactify": "0.13.x",
-  	"browserify": "4.1.x",
-    "http-server": "0.6.x"
-  },
-  "dependencies": {
-  	"react": "0.10.x"
-  },
   "scripts": {
     "build": "browserify -t [ reactify --es6 ] ./ -o ./build/react-router.js",
     "build-example": "browserify -t [ reactify --es6 ] ./example/app.jsx -o ./example/builded-app.js",
     "start-server": "http-server --cors"
   },
-  "author": "Mateus Zitelli <zitellimateus@gmail.com>",
-  "license": "GPLv2"
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "harmony": true
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "reactify": "0.13.x",
+    "browserify": "4.1.x",
+    "http-server": "0.6.x"
+  },
+  "dependencies": {
+    "react": "0.10.x"
+  }
 }
