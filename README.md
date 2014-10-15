@@ -2,10 +2,6 @@
 
 > Simple router for react.js
 
-## Quick use
-
-Installing ReactRouter is easy: run `npm install --save reactrouter`.
-
 ## Example
 
 For running the example:
